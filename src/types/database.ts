@@ -96,6 +96,49 @@ export interface Subscription {
   current_period_end: string | null;
 }
 
+// VIN History types
+export type VinMileageSource = "listing" | "update" | "inspection" | "manual";
+
+export interface VinRecord {
+  id: string;
+  vin: string;
+  make: string | null;
+  model: string | null;
+  year: number | null;
+  first_seen_at: string;
+  last_seen_at: string;
+  total_owners: number;
+  has_mileage_anomaly: boolean;
+}
+
+export interface VinMileageHistory {
+  id: string;
+  vin: string;
+  car_id: string | null;
+  recorded_by: string | null;
+  mileage: number;
+  source: VinMileageSource;
+  notes: string | null;
+  recorded_at: string;
+}
+
+export interface VinOwnershipHistory {
+  id: string;
+  vin: string;
+  car_id: string | null;
+  seller_id: string | null;
+  seller_type: UserType | null;
+  listed_price: number | null;
+  listed_at: string;
+  sold_at: string | null;
+}
+
+export interface VinReport {
+  record: VinRecord;
+  mileage_history: VinMileageHistory[];
+  ownership_history: VinOwnershipHistory[];
+}
+
 // Extended types with relations
 export interface CarWithPhotos extends Car {
   car_photos: CarPhoto[];

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { Menu, X, Globe, Car } from "lucide-react";
+import { Menu, X, Globe, Car, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -34,6 +34,9 @@ export function Header() {
             <Link href="/carros" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
               {t("carros")}
             </Link>
+            <Link href="/vin" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors inline-flex items-center gap-1">
+              <Shield className="h-3.5 w-3.5" /> VIN
+            </Link>
           </nav>
         </div>
         <div className="hidden md:flex items-center gap-3">
@@ -62,6 +65,9 @@ export function Header() {
             </Link>
             <Link href="/carros" className="text-sm font-medium text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>
               {t("carros")}
+            </Link>
+            <Link href="/vin" className="text-sm font-medium text-gray-600 hover:text-gray-900 inline-flex items-center gap-1" onClick={() => setMobileMenuOpen(false)}>
+              <Shield className="h-3.5 w-3.5" /> VIN
             </Link>
             <hr className="my-2" />
             <div className="flex items-center gap-2">

@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { VinHistoryReport } from "@/components/car/VinHistoryReport";
 import { ArrowLeft, Heart, Share2, Phone, MapPin, Calendar, Gauge, Fuel, Car } from "lucide-react";
 import Link from "next/link";
 
@@ -80,6 +81,11 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
                 </CardContent>
               </Card>
             </div>
+          </div>
+
+          {/* VIN History Section */}
+          <div className="mt-8">
+            <VinHistoryReport />
           </div>
         </div>
       </main>

@@ -147,6 +147,38 @@
     "visualizacoes": "Views",
     "mensagensNovas": "New Messages"
   },
+  "vinHistory": {
+    "titulo": "VIN History",
+    "semHistorico": "No history available for this VIN",
+    "semVin": "This car has no registered VIN",
+    "verificarVin": "Check VIN",
+    "historicoQuilometros": "Mileage History",
+    "historicoProprietarios": "Ownership History",
+    "quilometros": "Mileage",
+    "data": "Date",
+    "fonte": "Source",
+    "proprietario": "Owner",
+    "tipoVendedor": "Type",
+    "precoAnuncio": "Listed Price",
+    "dataAnuncio": "Listed Date",
+    "dataVenda": "Sold Date",
+    "totalProprietarios": "Total Owners",
+    "primeiroRegisto": "First Record",
+    "ultimoRegisto": "Last Record",
+    "alertaQuilometragem": "Mileage Alert",
+    "alertaDescida": "Possible mileage tampering detected! Recorded mileage is lower than a previous record.",
+    "semAlerta": "No anomalies detected",
+    "fontes": {
+      "listing": "Listing",
+      "update": "Update",
+      "inspection": "Inspection",
+      "manual": "Manual"
+    },
+    "particular": "Private",
+    "stand": "Dealer",
+    "reporteVin": "VIN Report",
+    "pesquisarVin": "Search by VIN..."
+  },
   "footer": {
     "sobre": "About",
     "contacto": "Contact",

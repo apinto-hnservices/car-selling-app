@@ -147,6 +147,38 @@
     "visualizacoes": "Visualizações",
     "mensagensNovas": "Mensagens Novas"
   },
+  "vinHistory": {
+    "titulo": "Histórico do VIN",
+    "semHistorico": "Sem histórico disponível para este VIN",
+    "semVin": "Este carro não tem VIN registado",
+    "verificarVin": "Verificar VIN",
+    "historicoQuilometros": "Histórico de Quilómetros",
+    "historicoProprietarios": "Histórico de Proprietários",
+    "quilometros": "Quilómetros",
+    "data": "Data",
+    "fonte": "Fonte",
+    "proprietario": "Proprietário",
+    "tipoVendedor": "Tipo",
+    "precoAnuncio": "Preço Anunciado",
+    "dataAnuncio": "Data do Anúncio",
+    "dataVenda": "Data da Venda",
+    "totalProprietarios": "Total de Proprietários",
+    "primeiroRegisto": "Primeiro Registo",
+    "ultimoRegisto": "Último Registo",
+    "alertaQuilometragem": "Alerta de Quilometragem",
+    "alertaDescida": "Possível alteração de quilometragem detectada! Os quilómetros registados são inferiores a um registo anterior.",
+    "semAlerta": "Sem anomalias detectadas",
+    "fontes": {
+      "listing": "Anúncio",
+      "update": "Atualização",
+      "inspection": "Inspeção",
+      "manual": "Manual"
+    },
+    "particular": "Particular",
+    "stand": "Stand",
+    "reporteVin": "Relatório VIN",
+    "pesquisarVin": "Pesquisar por VIN..."
+  },
   "footer": {
     "sobre": "Sobre",
     "contacto": "Contacto",
