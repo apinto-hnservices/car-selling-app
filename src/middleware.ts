@@ -6,25 +6,21 @@ const protectedRoutes = ["/dashboard"];
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Check if route is protected
-  const isProtected = protectedRoutes.some((route) =>
-    pathname.startsWith(route)
-  );
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  // Update Supabase session
-  const response = await updateSession(request);
-
-  if (isProtected) {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
-    if (!supabaseUrl || !supabaseKey) {
-      // If Supabase is not configured, redirect to login
+  // If Supabase is not configured, skip session management
+  if (!supabaseUrl || !supabaseKey) {
+    if (protectedRoutes.some((route) => pathname.startsWith(route))) {
       const loginUrl = new URL("/login", request.url);
       loginUrl.searchParams.set("redirect", pathname);
       return NextResponse.redirect(loginUrl);
     }
+    return NextResponse.next();
   }
+
+  // Update Supabase session
+  const response = await updateSession(request);
 
   return response;
 }
